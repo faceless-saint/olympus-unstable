@@ -1,6 +1,9 @@
-.idea
-forge-installer*
-forge-server*
-libraries
-minecraft_server*
-mods
+*
+!.gitignore
+!README.md
+!LICENSE
+!entrypoint.sh
+!import_modpack.py
+!modpack.json
+#!config/
+#!config/*

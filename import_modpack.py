@@ -7,6 +7,39 @@ import json
 import glob
 import os
 
+# TODO: Allow for user selection of checksum algorithm (currently using SHA256)
+
+
+def parse_arguments():
+    """ Parse command line arguments for the program
+
+    Returns: Parsed argument namespace
+    """
+    parser = argparse.ArgumentParser(
+        description='Import files for the given modpack configuration',
+        epilog=''' schema: {
+            forge: {
+                source: '<URL>',
+                version: '[str]'
+            },
+            mods: [
+                {
+                    source: '<URL>',
+                    name: '[str]',
+                    version: '[str]',
+                    disabled: [bool=false]
+                },
+                ...
+            ]
+        }''')
+    parser.add_argument('spec', metavar='FILE', help='modpack JSON specification')
+    parser.add_argument('target', metavar='DIR', nargs='?', default=os.getcwd(), help='import files to this directory')
+    parser.add_argument('-p', '--preserve', action='store_true', help='skip removal of obsolete mods')
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument('-s', '--server', action='store_true', help='import the modpack for a server')
+    group.add_argument('-c', '--client', action='store_true', help='import the modpack for a standalone client')
+    return parser.parse_args()
+
 
 def validate_file(file, digest=None):
     """ Validate the integrity of the given file
@@ -47,7 +80,7 @@ def generate_mod_filename(spec):
     version = spec.get('version', None)
     if name is not tag:
         name += ('-' + version + '-' if version else '-') + tag
-    return name + '.jar'
+    return name + ('.jar' if not spec.get('disabled') else '.jar.disabled')
 
 
 def download_file(source, destination, digest=None):
@@ -65,57 +98,67 @@ def download_file(source, destination, digest=None):
 
     # File already exists - validate against given digest
     if os.path.exists(destination):
+        print('\t[o] ' + destination)
         with open(destination, 'rb') as file:
             validate_file(file.read(), digest)
-        print('\t[o] ' + destination)
 
     # Download new file from source URL
     else:
-        r = requests.get(source)
-        validate_file(r.content, digest)
-        with open(destination, 'wb') as file:
-            file.write(r.content)
-        print('\t[\u2713] ' + destination)
+        print('\t[\u2193] ' + destination)
+        try:
+            r = requests.get(source)
+            validate_file(r.content, digest)
+            with open(destination, 'wb') as file:
+                file.write(r.content)
+        except requests.HTTPError as e:
+            print('\t[x] ' + destination)
+            raise e
+
 
 ###########################################################
 #                       BEGIN PROGRAM                     #
 ###########################################################
-
-parser = argparse.ArgumentParser(description='Import files for a modpack')
-parser.add_argument('spec', help='Modpack JSON specification')
-group = parser.add_mutually_exclusive_group()
-group.add_argument('-s', '--server', action='store_true', help='Install the Forge server files')
-group.add_argument('-c', '--client', action='store_true', help='Download the Forge installer')
-arguments = parser.parse_args()
-
-# TODO: Add JSON schema validation and formatting help
-# TODO: Remove mods that are not in the specification
-# TODO: Allow mods to be client-only or server-only
+arguments = parse_arguments()
 
 # Load modpack data from JSON
-print('Loading modpack configuration')
+print('Loading modpack configuration from ' + arguments.spec)
 with open(arguments.spec) as config:
     modpack = json.load(config)
-print('Forge version: ' + modpack['forge'].get('version', '<unknown>'))
+os.chdir(arguments.target)
+print('Forge version: ' + modpack.get('forge', {}).get('version', '<unknown>'))
 
 # Initialize mods directory
 if not os.path.exists('mods'):
     os.mkdir('mods')
 
-# Download the mod files
-print('Importing ' + str(len(modpack['mods'])) + ' mods:')
-for mod in modpack['mods']:
-    download_file(mod['source'], os.path.join('mods', generate_mod_filename(mod)), mod.get('digest'))
+# Only import server mods
+if arguments.server:
+    mods = [mod for mod in modpack.get('mods', []) if not mod.get('client')]
 
-print(arguments)
+# Only import client mods
+else:
+    mods = [mod for mod in modpack.get('mods', []) if not mod.get('server')]
+
+# Prune the mod directory of obsolete files
+if not arguments.preserve:
+    for mod in os.listdir('mods'):
+        if mod not in [generate_mod_filename(el) for el in mods] and not os.path.isdir(os.path.join('mods', mod)):
+            os.remove(os.path.join('mods', mod))
+
+# Download the mod files
+print('Importing ' + str(len(mods)) + ' mods:')
+for mod in mods:
+    download_file(mod.get('source'), os.path.join('mods', generate_mod_filename(mod)), mod.get('digest'))
+
 # Download the Forge installer
 if arguments.server or arguments.client:
-        print('Retrieving installer for Forge:')
-        download_file(modpack['forge']['source'], 'forge-installer.jar', modpack['forge'].get('digest'))
+        forge = modpack.get('forge', {})
+        print('Retrieving installer for Minecraft Forge:')
+        download_file(forge.get('source'), 'forge-installer.jar', forge.get('digest'))
 
         # Install the Forge server files
-        if arguments.server:
-            print('Installing Forge server files')
+        if arguments.server and os.path.exists('forge-installer.jar'):
+            print('Installing Minecraft Forge server files')
             subprocess.call(['java', '-jar', 'forge-installer.jar', '--installServer'], stdout=open(os.devnull))
             os.rename(glob.glob('forge-*-universal.jar')[0], 'forge-server.jar')
 print('Modpack imported')

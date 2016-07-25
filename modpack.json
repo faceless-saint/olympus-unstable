@@ -33,7 +33,8 @@
     "name": "backpacks",
     "version": "",
     "source": "http://minecraft.curseforge.com/projects/backpacks/files/2314862/download",
-    "digest": "0696979f7b1f98b109992810208e2a4a95aa04efae4947b22093a4cb3e50005c"
+    "digest": "0696979f7b1f98b109992810208e2a4a95aa04efae4947b22093a4cb3e50005c",
+    "disabled": true
   }, {
     "name": "expandable-backpacks",
     "version": "",
@@ -66,174 +67,182 @@
     "digest": "956115ae51a490946053e28e02cd963c21f91448b5e7e51b25b8c97a0be83410"
   }, {
     "name": "morph-o-tool",
-    "version": "",
-    "source": "",
+    "version": "1.0-6",
+    "source": "http://minecraft.curseforge.com/projects/morph-o-tool/files/2318500/download",
     "digest": ""
   }, {
     "name": "psi",
-    "version": "",
-    "source": "",
+    "version": "1.0-36",
+    "source": "http://minecraft.curseforge.com/projects/psi/files/2310114/download",
     "digest": ""
   }, {
     "name": "neat",
-    "version": "",
-    "source": "",
+    "version": "1.3-11",
+    "source": "http://minecraft.curseforge.com/projects/neat/files/2318239/download",
     "digest": ""
   }, {
     "name": "morpheus",
-    "version": "",
-    "source": "",
+    "version": "3.1.6",
+    "source": "http://minecraft.curseforge.com/projects/morpheus/files/2309658/download",
     "digest": ""
   }, {
     "name": "opencomputerss",
     "version": "",
-    "source": "",
+    "source": "http://minecraft.curseforge.com/projects/opencomputers/files/2310528/download",
     "digest": ""
+  }, {
+    "name": "openradio",
+    "source": "http://minecraft.curseforge.com/projects/openradio/files/2314139/download"
+  }, {
+    "name": "opensecurity",
+    "source": "http://minecraft.curseforge.com/projects/opensecurity/files/2283754/download"
   }, {
     "name": "mantle",
     "version": "",
-    "source": "",
+    "source": "http://minecraft.curseforge.com/projects/mantle/files/2311098/download",
     "digest": ""
   }, {
     "name": "tinkers-construct",
     "version": "",
-    "source": "",
+    "source": "http://minecraft.curseforge.com/projects/tinkers-construct/files/2311099/download",
     "digest": ""
   }, {
     "name": "journeymap-32274",
     "version": "",
-    "source": "",
+    "source": "http://minecraft.curseforge.com/projects/journeymap-32274/files/2311898/download",
     "digest": ""
   }, {
     "name": "just-enough-items-jei",
     "version": "",
-    "source": "",
-    "digest": ""
-  }, {
-    "name": "jeiaddons",
-    "version": "",
-    "source": "",
+    "source": "http://minecraft.curseforge.com/projects/just-enough-items-jei/files/2316836/download",
     "digest": ""
   }, {
     "name": "just-enough-resources-jer",
     "version": "",
-    "source": "",
+    "source": "http://minecraft.curseforge.com/projects/just-enough-resources-jer/files/2317308/download",
     "digest": ""
   }, {
     "name": "inventory-tweaks",
     "version": "",
-    "source": "",
+    "source": "http://minecraft.curseforge.com/projects/inventory-tweaks/files/2315240/download",
     "digest": ""
   }, {
     "name": "forestry",
     "version": "",
-    "source": "",
+    "source": "http://minecraft.curseforge.com/projects/forestry/files/2318374/download",
     "digest": ""
+  }, {
+    "name": "just-enough-forestry-bees-jefb",
+    "source": "http://minecraft.curseforge.com/projects/just-enough-forestry-bees-jefb/files/2318675/download"
   }, {
     "name": "fastleafdecay",
     "version": "",
-    "source": "",
-    "digest": ""
-  }, {
-    "name": "chunk-edge-indicator",
-    "version": "",
-    "source": "",
+    "source": "http://minecraft.curseforge.com/projects/fastleafdecay/files/2318159/download",
     "digest": ""
   }, {
     "name": "tomb-many-graves",
     "version": "",
-    "source": "",
+    "source": "http://minecraft.curseforge.com/projects/tomb-many-graves/files/2318067/download",
     "digest": ""
   }, {
     "name": "better-foliage",
     "version": "",
-    "source": "",
+    "source": "http://minecraft.curseforge.com/projects/better-foliage/files/2311130/download",
     "digest": ""
   }, {
     "name": "block-drops-jei-addon",
     "version": "",
-    "source": "",
+    "source": "http://minecraft.curseforge.com/projects/block-drops-jei-addon/files/2317655/download",
     "digest": ""
   }, {
     "name": "blood-arsenal",
     "version": "",
-    "source": "",
+    "source": "http://minecraft.curseforge.com/projects/blood-arsenal/files/2317749/download",
     "digest": ""
   }, {
     "name": "blood-magic",
     "version": "",
-    "source": "",
+    "source": "http://minecraft.curseforge.com/projects/blood-magic/files/2317643/download",
     "digest": ""
   }, {
     "name": "botania-unofficial",
     "version": "",
-    "source": "",
+    "source": "http://minecraft.curseforge.com/projects/botania-unofficial/files/2317488/download",
     "digest": ""
   }, {
     "name": "chameleon",
     "version": "",
-    "source": "",
+    "source": "http://minecraft.curseforge.com/projects/chameleon/files/2314835/download",
     "digest": ""
   }, {
     "name": "storage-drawers",
     "version": "",
-    "source": "",
+    "source": "http://minecraft.curseforge.com/projects/storage-drawers/files/2316324/download",
     "digest": ""
   }, {
     "name": "drawers-bits",
     "version": "",
-    "source": "",
+    "source": "http://minecraft.curseforge.com/projects/drawers-bits/files/2317890/download",
     "digest": ""
   }, {
     "name": "ender-io",
     "version": "",
-    "source": "",
+    "source": "http://minecraft.curseforge.com/projects/ender-io/files/2318128/download",
     "digest": ""
   }, {
     "name": "endercore",
     "version": "",
-    "source": "",
+    "source": "http://minecraft.curseforge.com/projects/endercore/files/2317221/download",
     "digest": ""
   }, {
     "name": "extra-utilities",
     "version": "",
-    "source": "",
+    "source": "http://minecraft.curseforge.com/projects/extra-utilities/files/2316967/download",
     "digest": ""
   }, {
     "name": "chisels-bits",
     "version": "",
-    "source": "",
+    "source": "http://minecraft.curseforge.com/projects/chisels-bits/files/2318306/download",
     "digest": ""
   }, {
     "name": "chisel",
     "version": "",
-    "source": "",
+    "source": "http://minecraft.curseforge.com/projects/chisel/files/2315165/download",
     "digest": ""
   }, {
     "name": "chisels-bytes",
     "version": "",
-    "source": "",
+    "source": "http://minecraft.curseforge.com/projects/chisels-bytes/files/2315933/download",
     "digest": ""
+  }, {
+    "name": "techreborn",
+    "source": "http://minecraft.curseforge.com/projects/techreborn/files/2316493/download"
   }, {
     "name": "translocator",
     "version": "",
-    "source": "",
+    "source": "http://minecraft.curseforge.com/projects/translocator/files/2317107/download",
     "digest": ""
   }, {
     "name": "enderstorage",
     "version": "",
-    "source": "",
+    "source": "http://minecraft.curseforge.com/projects/enderstorage/files/2317100/download",
     "digest": ""
   }, {
     "name": "chicken-chunks",
     "version": "",
-    "source": "",
+    "source": "http://minecraft.curseforge.com/projects/chicken-chunks/files/2317098/download",
     "digest": ""
   }, {
     "name": "codechicken-core",
     "version": "",
-    "source": "",
+    "source": "http://minecraft.curseforge.com/projects/codechicken-core/files/2317096/download",
     "digest": ""
+  }, {
+    "name": "industrial-craft",
+    "source": "http://minecraft.curseforge.com/projects/industrial-craft/files/2317760/download"
+  }, {
+    "name": "compact-solars",
+    "source": "http://minecraft.curseforge.com/projects/compact-solars/files/2316692/download"
   }, {
     "name": "mekanism",
     "version": "9.1.0.288",
