@@ -10,31 +10,15 @@
     "source": "http://minecraft.curseforge.com/projects/auto-sapling/files/2309607/download",
     "digest": "c8b13d90fbbbf191ed20e4f8c845048fdd3257003c065b0a8179c044f723cdac"
   }, {
-    "name": "baubles",
+    "name": "baubless",
     "version": "",
     "source": "http://minecraft.curseforge.com/projects/baubles/files/2301094/download",
     "digest": "e95445dbe887afec9b4f2890fb8c1d9c1884badf54c76b10716461c5920b1d53"
-  }, {
-    "name": "baubles-stuff",
-    "version": "",
-    "source": "http://minecraft.curseforge.com/projects/baubles-stuff/files/2302580/download",
-    "digest": "a1f33a9d15c011b1cb5e89863da8a06835db592192e49a5d6ff03bdf058527df"
   }, {
     "name": "gendustry",
     "version": "",
     "source": "http://minecraft.curseforge.com/projects/gendustry/files/2315713/download",
     "digest": "63a4de90e237738dfe55007aafd4b6b254f48538e3be4456b49f05633ba53a84"
-  }, {
-    "name": "pressure-pipes",
-    "version": "",
-    "source": "http://minecraft.curseforge.com/projects/pressure-pipes/files/2313928/download",
-    "digest": "8aaa900fd633edb7ba7ad0de9a26bdf3c0f7f77b88b924636158111edfda9263"
-  }, {
-    "name": "backpacks",
-    "version": "",
-    "source": "http://minecraft.curseforge.com/projects/backpacks/files/2314862/download",
-    "digest": "0696979f7b1f98b109992810208e2a4a95aa04efae4947b22093a4cb3e50005c",
-    "disabled": true
   }, {
     "name": "expandable-backpacks",
     "version": "",
@@ -72,8 +56,8 @@
     "digest": ""
   }, {
     "name": "psi",
-    "version": "1.0-36",
-    "source": "http://minecraft.curseforge.com/projects/psi/files/2310114/download",
+    "version": "1.0-37",
+    "source": "http://minecraft.curseforge.com/projects/psi/files/2319176/download",
     "digest": ""
   }, {
     "name": "neat",
@@ -93,9 +77,6 @@
   }, {
     "name": "openradio",
     "source": "http://minecraft.curseforge.com/projects/openradio/files/2314139/download"
-  }, {
-    "name": "opensecurity",
-    "source": "http://minecraft.curseforge.com/projects/opensecurity/files/2283754/download"
   }, {
     "name": "mantle",
     "version": "",
@@ -143,11 +124,6 @@
     "name": "tomb-many-graves",
     "version": "",
     "source": "http://minecraft.curseforge.com/projects/tomb-many-graves/files/2318067/download",
-    "digest": ""
-  }, {
-    "name": "better-foliage",
-    "version": "",
-    "source": "http://minecraft.curseforge.com/projects/better-foliage/files/2311130/download",
     "digest": ""
   }, {
     "name": "block-drops-jei-addon",
@@ -214,9 +190,6 @@
     "version": "",
     "source": "http://minecraft.curseforge.com/projects/chisels-bytes/files/2315933/download",
     "digest": ""
-  }, {
-    "name": "techreborn",
-    "source": "http://minecraft.curseforge.com/projects/techreborn/files/2316493/download"
   }, {
     "name": "translocator",
     "version": "",
