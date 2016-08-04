@@ -3,7 +3,12 @@
 !README.md
 !LICENSE
 !entrypoint.sh
-!import_modpack.py
-!modpack.json
-#!config/
-#!config/*
+!instance.cfg
+!patches
+!patches/*
+!minecraft
+!minecraft/modpack.json
+!minecraft/INSTALL_*
+!minecraft/config
+!minecraft/config/*
+
