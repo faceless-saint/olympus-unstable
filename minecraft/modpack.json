@@ -4,21 +4,40 @@
     "checksum": "5736da99f41e83bc1c1b6044a021f766429e17a9bbdbdcd8101659d704f43661",
     "server": "3bb6f8b47cf45e805a75b853483d87fccebf2020130b294dae92195134073d72"
   },
+  "ignore": [
+    "spongeforge-1.10.2-2044-5.0.0-BETA-1655.jar"
+  ],
   "mods": [{
     "name": "auto-sapling",
     "version": "",
     "curse": "2309607",
     "checksum": "c8b13d90fbbbf191ed20e4f8c845048fdd3257003c065b0a8179c044f723cdac"
   }, {
-    "name": "baubless",
+    "name": "baubles",
     "version": "",
     "curse": "2301094",
     "checksum": "e95445dbe887afec9b4f2890fb8c1d9c1884badf54c76b10716461c5920b1d53"
+  }, {
+    "name": "baubles-stuff",
+    "version": "",
+    "curse": "2302580",
+    "checksum": "a1f33a9d15c011b1cb5e89863da8a06835db592192e49a5d6ff03bdf058527df"
   }, {
     "name": "gendustry",
     "version": "",
     "curse": "2315713",
     "checksum": "63a4de90e237738dfe55007aafd4b6b254f48538e3be4456b49f05633ba53a84"
+  }, {
+    "name": "pressure-pipes",
+    "version": "",
+    "curse": "2313928",
+    "checksum": "8aaa900fd633edb7ba7ad0de9a26bdf3c0f7f77b88b924636158111edfda9263"
+  }, {
+    "name": "backpacks",
+    "version": "",
+    "curse": "2314862",
+    "checksum": "0696979f7b1f98b109992810208e2a4a95aa04efae4947b22093a4cb3e50005c",
+    "disabled": true
   }, {
     "name": "expandable-backpacks",
     "version": "",
@@ -56,8 +75,8 @@
     "checksum": ""
   }, {
     "name": "psi",
-    "version": "1.0-37",
-    "curse": "2319176",
+    "version": "1.0-36",
+    "curse": "2310114",
     "checksum": ""
   }, {
     "name": "neat",
@@ -70,13 +89,16 @@
     "curse": "2309658",
     "checksum": ""
   }, {
-    "name": "opencomputerss",
+    "name": "opencomputers",
     "version": "",
     "curse": "2310528",
     "checksum": ""
   }, {
     "name": "openradio",
     "curse": "2314139"
+  }, {
+    "name": "opensecurity",
+    "curse": "2283754"
   }, {
     "name": "mantle",
     "version": "",
@@ -124,6 +146,11 @@
     "name": "tomb-many-graves",
     "version": "",
     "curse": "2318067",
+    "checksum": ""
+  }, {
+    "name": "better-foliage",
+    "version": "",
+    "curse": "2311130",
     "checksum": ""
   }, {
     "name": "block-drops-jei-addon",
@@ -190,6 +217,9 @@
     "version": "",
     "curse": "2315933",
     "checksum": ""
+  }, {
+    "name": "techreborn",
+    "curse": "2316493"
   }, {
     "name": "translocator",
     "version": "",
