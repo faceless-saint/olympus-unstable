@@ -4,10 +4,8 @@
     "checksum": "5736da99f41e83bc1c1b6044a021f766429e17a9bbdbdcd8101659d704f43661",
     "server": "3bb6f8b47cf45e805a75b853483d87fccebf2020130b294dae92195134073d72"
   },
-  "ignore": [
-    "spongeforge-1.10.2-2044-5.0.0-BETA-1655.jar"
-  ],
-  "mods": [{
+  "mods": {
+    "items":[{
     "name": "auto-sapling",
     "version": "",
     "curse": "2309607",
@@ -261,5 +259,12 @@
     "version": "9.1.0.288",
     "url": "http://aidancbrady.com/wp-content/uploads/mekanism/288/MekanismTools-1.10.2-9.1.0.288.jar",
     "checksum": "f51f12f9503f2d4dd7354c1a3ca9ac2c582b1ad9acdc19f5dfc8968c46b7ac31"
-  }]
+  }],
+  "ignore": [
+    "spongeforge-1.10.2-2044-5.0.0-BETA-1655.jar"
+  ]},
+  "config": {
+    "repository": "faceless-saint/olympus-unstable",
+    "path": "minecraft/config"
+  }
 }
